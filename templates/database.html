@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Database</h1>
+    
+    <h2>Data from Database</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Year</th>
+                <th>Population</th>
+                <th>Total Internet Subscribers</th>
+                <th>Broadband Subscribers</th>
+                <th>Wireless Subscribers</th>
+                <th>Predicted Year</th>
+                <th>Predicted Crimes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result[0] }}</td>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+                <td>{{ result[3] }}</td>
+                <td>{{ result[4] }}</td>
+                <td>{{ result[5] }}</td>
+                <td>{{ result[6] }}</td>
+                <td>{{ result[7] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Add a link to go back to the home page -->
+    <a href="/" class="fade-in2">Back to Home</a>
+</body>
+</html>

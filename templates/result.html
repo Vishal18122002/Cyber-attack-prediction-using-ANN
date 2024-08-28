@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="fade-in">Predicted Cyber Attack for {{ predicted_year }}</h1>
+    <p class="fade-in">The predicted number of cyber attacks for the year {{ predicted_year }} is: {{ predicted_crimes }}</p>
+
+    
+    <canvas id="predictionChart" width="600" height="300" class="chart" ></canvas>
+    
+    <script>
+        var ctx = document.getElementById('predictionChart').getContext('2d');
+        var chartData = {{ chart_data|tojson }};
+        
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: chartData.years,
+                datasets: [{
+                    label: 'Predicted Crimes',
+                    data: chartData.crimes,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: true  // Fill the area under the line
+                }]
+            },
+            options: {
+                animation: {
+                    duration: 2000,  // Animation duration in milliseconds
+                    easing: 'linear',  // Animation easing function
+                    from: 0,  // Start animation from the beginning
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Crimes'
+                        }
+                    }
+                }
+            }
+        });
+
+        
+    </script>
+    <a href="/" class="fade-in2">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Attack Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>    
+    <img src="{{ url_for('static', filename='pexels-tima-miroshnichenko-5380642.jpg') }}" alt="Cyber Attack" class="fade-in">
+
+    <h1 class="fade-in">Cyber Attack Prediction</h1> 
+    <form action="/predict" method="post">
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" required min="2002"><br><br>
+        <label for="population">Population:</label>
+        <input type="number" id="population" name="population" required min="55858946"><br><br>
+        <label for="tis">Total Internet Subscribers:</label>
+        <input type="number" id="tis" name="tis" required min="6000000"><br><br>
+        <label for="tbs">Broadband Subscribers:</label>
+        <input type="number" id="tbs" name="tbs" required min="0"><br><br>
+        <label for="twis">Wireless Subscribers:</label>
+        <input type="number" id="twis" name="twis" required min="0"><br><br>
+        <input type="submit" value="Predict">
+        <input type="hidden" name="selected_year" value="{{ request.form['year'] }}">
+    </form>
+</body>
+</html>

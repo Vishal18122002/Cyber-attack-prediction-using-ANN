@@ -1,0 +1,88 @@
+body {
+    background: rgb(203,213,212);
+    background: linear-gradient(93deg, rgba(203,213,212,1) 0%, rgba(254,255,255,1) 48%, rgba(203,213,212,1) 100%);
+}
+
+/* Style the h1 header */
+h1 {
+    font-size: 80px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+    height: 90px;
+    margin-top: 0;
+    border-radius: 10px;
+    background: rgb(19,46,44);
+    background: linear-gradient(93deg, rgba(19,46,44,1) 0%, rgba(17,191,182,1) 48%, rgba(31,54,52,1) 100%);
+}
+
+/* Style the form container */
+form {
+    position: relative;
+    background-color: snow;
+    padding: 50px;
+    border-radius: 10px;
+    width: 300px;
+    margin:220px auto; /* Center the form horizontally */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style form labels and input fields */
+label {
+    position: relative;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the Predict button */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* CSS for fade-in animation */
+.fade-in {
+    animation: fadeIn 1s;
+    text-align: center;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Image styling */
+img {
+    width: 110%;
+    height:110%;
+    position: absolute;
+    border-radius: 10px;
+    margin-left:-1.25em ;
+    margin-top: -2em;
+
+}
