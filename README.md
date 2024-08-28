@@ -57,16 +57,6 @@ The script uses a dictionary named `state_info` to store the input data for the 
 - **tbs**: Total Broadband Subscribers.
 - **twis**: Total Wireless Subscribers.
 
-Example:
-```python
-state_info = {
-    "state": "Tamil Nadu",
-    "year": 2023,
-    "population": 83900000,
-    "tis": 14800000,
-    "tbs": 5860000,
-    "twis": 74300000
-}
 
 ### Key Points:
 - **Model Training and Prediction**: The README provides details on how the model is trained and how predictions are made.
