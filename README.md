@@ -65,4 +65,7 @@ The script uses a dictionary named `state_info` to store the input data for the 
 
 Replace `"Vishal G"` and `"sivavishal1812@gmail.com"` with your actual GitHub username and email address. You can also customize any other details as necessary.
 
+### Preview Video link : https://drive.google.com/file/d/1tQar9y2n7PTQduKXsNaj2zXdX2SHbKQG/view?usp=drive_link
+
+
 
